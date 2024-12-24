@@ -12,10 +12,8 @@ public class POC {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @ManyToOne
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
+    @Column(name = "restaurant_id")
+    private int restaurantId;
 
     private String name;
     private String role;

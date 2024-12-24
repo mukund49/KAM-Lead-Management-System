@@ -15,13 +15,11 @@ public class Interaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
+    @Column(name = "restaurant_id")
+    private int restaurantId;
 
-    @ManyToOne
-    @JoinColumn(name = "kam_id")
-    private KAM kam;
+    @Column(name = "kam_id")
+    private int kamId;
 
     private String type;
     private String details;

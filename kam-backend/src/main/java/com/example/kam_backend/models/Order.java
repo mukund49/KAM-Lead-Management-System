@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 
@@ -15,13 +16,10 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @ManyToOne
-    @JoinColumn(name = "restaurant_id")
-    private Restaurant restaurant;
-
     private BigDecimal amount;
+    @Column(name = "restaurant_id")
+    private int restaurantId;
     private String status;
-    private LocalDateTime orderDate;
+    private Timestamp orderDate;
 
 }

@@ -21,9 +21,8 @@ public class Restaurant {
     private String address;
     private String status;
 
-    @ManyToOne
-    @JoinColumn(name = "kam_id")
-    private KAM kam;
+    @Column(name = "kam_id")
+    private int kamId;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
